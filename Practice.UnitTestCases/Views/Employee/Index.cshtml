@@ -1,0 +1,55 @@
+﻿
+<table>
+	<tr>
+		<td>ID:<input type="text" id="txt_id"></td>
+	</tr>
+	<tr>
+		<td>Name:<input type="text" id="txt_name"></td>
+	</tr>
+	<tr>
+		<td>Address:<input type="text" id="txt_adress"></td>
+	</tr>
+	<tr>
+		<td>Description:<input type="text" id="txt_des"></td>
+	</tr>
+	<tr>
+		<td><button id="btn_create">Create</button></td>
+		<td><button id="btn_delete">Delete</button></td>
+
+
+	</tr>
+</table>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	function collecting() {
+		var res = {};
+		res.Id = $("#txt_id").val();
+		res.Name = $("#txt_name").val();
+		res.Address = $("#txt_adress").val();
+		res.Description = $("#txt_des").val();
+
+		return res;
+
+	}
+	$("#btn_create").click(function () {
+		var res = collecting();
+		
+		$.ajax({
+			url: "/Employee/Create",
+			data: collecting(),
+		}).done();
+	
+	});
+	$("#btn_delete").click(function () {
+		alert("caliing");
+		//var res = collecting();
+
+		$.ajax({
+			url: "/Employee/Delete",
+			data: { id:$("#txt_id").val() }
+		}).done();
+
+	});
+
+</script>
