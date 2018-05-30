@@ -2,10 +2,11 @@
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Practice.UnitTestCases;
+using Practice.UnitTestCases.Business;
 using Practice.UnitTestCases.Controllers;
 
 
-namespace UnitTestProject1
+namespace UnitTestProject1.DAta
 {
 	[TestClass]
 	public class EmployeeControllerTest
@@ -30,7 +31,7 @@ namespace UnitTestProject1
 		public void Create_Testing_Effort_Integration()
 		{
 			EmployeeController employeeController = new EmployeeController();
-			tbl_Employee original = new tbl_Employee();
+			Employee original = new Employee();
 			original.Id = 1;
 			original.Name = "sravani";
 			original.Address = "eluru";
@@ -51,7 +52,7 @@ namespace UnitTestProject1
 		public void Create_Testing_IsExist_Integration()
 		{
 			EmployeeController employeeController = new EmployeeController();
-			tbl_Employee original = new tbl_Employee();
+			Employee original = new Employee();
 			original.Id = 2;
 			original.Name = "sravani";
 			original.Address = "eluru";
@@ -72,7 +73,7 @@ namespace UnitTestProject1
 		public void Create_Testing_Update_Integration()
 		{
 			EmployeeController employeeController = new EmployeeController();
-			tbl_Employee original = new tbl_Employee();
+			Employee original = new Employee();
 			original.Id = 1;
 			original.Name = "sravani1";
 			original.Address = "eluru";
@@ -99,7 +100,7 @@ namespace UnitTestProject1
 			original.Address = "ongole1";
 			original.Description = "siva1";
 
-			var actinres =employeeController.Delete(original);
+			var actinres =employeeController.Delete(original.Id);
 			//bool real = true;
    		    JsonResult jsonResult = (JsonResult)actinres;
 			var ori = (tbl_Employee)jsonResult.Data;

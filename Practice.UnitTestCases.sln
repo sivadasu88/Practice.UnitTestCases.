@@ -7,9 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.UnitTestCases", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.UnitTestCases.Tests", "UnitTestProject1\Practice.UnitTestCases.Tests.csproj", "{D88547D2-600F-4C3E-96ED-5DB60C5FEA20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.UnitTestCases.Business", "ClassLibrary1\Practice.UnitTestCases.Business.csproj", "{547BA7C9-755C-4AF5-B07A-10A0BCEA71CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice.UnitTestCases.Business", "ClassLibrary1\Practice.UnitTestCases.Business.csproj", "{547BA7C9-755C-4AF5-B07A-10A0BCEA71CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.UnitTestCases.NUnitTest", "Practice.UnitTestCases.NUnitTest\Practice.UnitTestCases.NUnitTest.csproj", "{2C39E430-54FD-4516-A449-FC5F1B288AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.UnitTestCases.DataAccessLayer", "Practice.UnitTestCases.DataAccessLayer\Practice.UnitTestCases.DataAccessLayer.csproj", "{E6ECEA64-D156-47F1-A12C-E70223E7565D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSystem", "LogSystem\LogSystem.csproj", "{65BDCACA-F525-4A72-A746-E9EECCD9B233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2C39E430-54FD-4516-A449-FC5F1B288AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C39E430-54FD-4516-A449-FC5F1B288AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C39E430-54FD-4516-A449-FC5F1B288AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6ECEA64-D156-47F1-A12C-E70223E7565D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6ECEA64-D156-47F1-A12C-E70223E7565D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6ECEA64-D156-47F1-A12C-E70223E7565D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6ECEA64-D156-47F1-A12C-E70223E7565D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BDCACA-F525-4A72-A746-E9EECCD9B233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BDCACA-F525-4A72-A746-E9EECCD9B233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BDCACA-F525-4A72-A746-E9EECCD9B233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BDCACA-F525-4A72-A746-E9EECCD9B233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

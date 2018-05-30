@@ -76,6 +76,10 @@
       <Project>{547ba7c9-755c-4af5-b07a-10a0bcea71cb}</Project>
       <Name>Practice.UnitTestCases.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Practice.UnitTestCases.DataAccessLayer\Practice.UnitTestCases.DataAccessLayer.csproj">
+      <Project>{E6ECEA64-D156-47F1-A12C-E70223E7565D}</Project>
+      <Name>Practice.UnitTestCases.DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Practice.UnitTestCases\Practice.UnitTestCases.csproj">
       <Project>{DF64DDDA-D246-4839-8885-67511A28B16D}</Project>
       <Name>Practice.UnitTestCases</Name>

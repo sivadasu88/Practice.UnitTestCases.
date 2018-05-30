@@ -13,7 +13,7 @@
 		<td>Description:<input type="text" id="txt_des"></td>
 	</tr>
 	<tr>
-		<td><button id="btn_create">Create</button></td>
+		<td><button id="btn_save">Save</button></td>
 		<td><button id="btn_delete">Delete</button></td>
 
 
@@ -32,7 +32,7 @@
 		return res;
 
 	}
-	$("#btn_create").click(function () {
+	$("#btn_save").click(function () {
 		var res = collecting();
 		
 		$.ajax({

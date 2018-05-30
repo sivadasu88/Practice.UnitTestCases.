@@ -155,25 +155,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Practice.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Practice.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Practice.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Practice.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Practice.UnitTestCases.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Practice.UnitTestCases.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tbl_Employee.cs">
-      <DependentUpon>Practice.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -182,28 +164,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Practice.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Practice.Context.cs</LastGenOutput>
-      <DependentUpon>Practice.UnitTestCases.edmx</DependentUpon>
-    </Content>
-    <Content Include="Practice.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Practice.UnitTestCases.edmx</DependentUpon>
-      <LastGenOutput>Practice.cs</LastGenOutput>
-    </Content>
-    <Content Include="Practice.UnitTestCases.edmx.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Practice.UnitTestCases.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Practice.UnitTestCases.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Practice.UnitTestCases.edmx.diagram">
-      <DependentUpon>Practice.UnitTestCases.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -251,6 +215,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Practice.UnitTestCases.Business.csproj">
+      <Project>{547BA7C9-755C-4AF5-B07A-10A0BCEA71CB}</Project>
+      <Name>Practice.UnitTestCases.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
