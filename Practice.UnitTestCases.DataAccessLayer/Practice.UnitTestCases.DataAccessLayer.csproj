@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DataGeneric\GDataRepository.cs" />
+    <Compile Include="DataGeneric\IGDataRepository.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="IDataRepository.cs" />
     <Compile Include="Practice.Context.cs">

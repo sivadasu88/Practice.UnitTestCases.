@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LogSystem
 {
-    public class Class1
-    {
-    }
+	public interface ILogFile
+	{
+		void WriteMessage(string message);
+		void WriteExceptionMessage(string exmessage);
+	}
 }

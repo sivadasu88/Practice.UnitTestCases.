@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using LogSystem;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Practice.UnitTestCases.Business;
 
@@ -114,5 +117,33 @@ namespace Practice.UnitTestCases.Tests
 			Assert.AreEqual(expected, actual);
 
 		}
+
+		[TestMethod]
+		public void Test_FileExtensions()
+		{
+			// arrange  
+			FileSystemInformation fileinfo = new FileSystemInformation();
+			
+				  string sourcepath = @"D:\FirstFile\MyTest";
+			FileInfo[] fiels = fileinfo.GetFilesFromFolder(sourcepath);
+		}
+
+		[TestMethod]
+		public void Most_Words()
+		{
+			// arrange  
+			string str = "Test Test New NEw Hello TESt Hello";
+
+			var list = str.Split(' ');
+
+			var result = list
+			  .GroupBy(s => s)
+			  .Where(g => g.Count() > 1)
+			  .OrderByDescending(g => g.Count())
+			  // .Select(g => g.Count());
+			  .Select(x => new  { Name = x.Key, Count = x.Count() }).FirstOrDefault();
+		}
+		
+		
 	}
 }

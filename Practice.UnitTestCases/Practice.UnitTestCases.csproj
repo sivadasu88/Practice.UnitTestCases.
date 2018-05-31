@@ -221,6 +221,10 @@
       <Project>{547BA7C9-755C-4AF5-B07A-10A0BCEA71CB}</Project>
       <Name>Practice.UnitTestCases.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogSystem\LogSystem.csproj">
+      <Project>{65BDCACA-F525-4A72-A746-E9EECCD9B233}</Project>
+      <Name>LogSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
