@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LogSystem;
 using Practice.UnitTestCases.Business;
 
 namespace Practice.UnitTestCases.Controllers
@@ -10,6 +11,7 @@ namespace Practice.UnitTestCases.Controllers
     public class EmployeeController : Controller
     {
 		IRepository repository = new Repository();
+		LogFile log = new LogFile();
 		// GET: Employee
 		public ActionResult Index()
         {
@@ -18,24 +20,31 @@ namespace Practice.UnitTestCases.Controllers
 
        
         // GET: Employee/Create
+		
         public ActionResult Create(Employee emp)
         {
 			bool res = false;
-			var employee = repository.GetListById(emp.Id);			
-			if (employee != null)
+			try
 			{
-				res=repository.Update(emp);
+				var employee = repository.GetListById(emp.Id);
+				if (employee != null)
+				{
+					res = repository.Update(emp);
+					log.WriteMessage("updated sucessfully");
+				}
+				else
+				{
+					res = repository.Insert(emp);
+					log.WriteMessage("Inserted Sussfully");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				res=repository.Insert(emp);
+				log.WriteExceptionMessage(ex.Message);
+
 			}
-				
 			return Json(res,JsonRequestBehavior.AllowGet);
         }
-
-       
-
        
 
         // GET: Employee/Delete/5
